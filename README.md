@@ -28,9 +28,10 @@ This project uses Mocha and Chai for unit testing.
   - [placeShip](#player-methods-placeship)
 - [GAME INSTANCE FUNCTIONS](#game-instance-functions)
   - [checkGameStatus](#game-instance-functions-checkgamestatus)
-- [checkForShip](#checkforship)
-- [damageShip](#damageship)
-- [fire](#fire)
+- [SHIP METHODS](#ship-methods)
+     - [checkForShip](#ship-methods-checkforship)
+     - [damageShip](#ship-methods-damageship)
+     - [fire](#ship-methods-fire)
   <a name=""></a>
 
 <a name="mocha"></a>
@@ -159,10 +160,10 @@ let actual = checkGameStatus(players);
 expect(actual).to.be.false;
 ```
 
-<a name="checkforship"></a>
-
-# checkForShip
-
+<a name="ship-methods"></a>
+# SHIP METHODS
+<a name="ship-methods-checkforship"></a>
+## checkForShip
 should correctly report no ship at a given players coordinate.
 
 ```js
@@ -195,10 +196,8 @@ expect(checkForShip(player, [2, 2])).to.deep.equal(player.ships[2]);
 expect(checkForShip(player, [9, 9])).to.be.false;
 ```
 
-<a name="damageship"></a>
-
-# damageShip
-
+<a name="ship-methods-damageship"></a>
+## damageShip
 should register damage on a given ship at a given location.
 
 ```js
@@ -211,10 +210,8 @@ expect(ship.damage).to.not.be.empty;
 expect(ship.damage[0]).to.deep.equal([0, 0]);
 ```
 
-<a name="fire"></a>
-
-# fire
-
+<a name="ship-methods-fire"></a>
+## fire
 should record damage on the given players ship at a given coordinate.
 
 ```js
