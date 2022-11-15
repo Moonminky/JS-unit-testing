@@ -26,6 +26,8 @@ This project uses Mocha and Chai for unit testing.
   - [validateLocation](#player-methods-validatelocation)
   - [validateLocations](#player-methods-validatelocations)
   - [placeShip](#player-methods-placeship)
+- [GAME INSTANCE FUNCTIONS](#game-instance-functions)
+  - [checkGameStatus](#game-instance-functions-checkgamestatus)
 - [checkForShip](#checkforship)
 - [damageShip](#damageship)
 - [fire](#fire)
@@ -135,6 +137,26 @@ let handler = function() {
 };
 expect(handler).to.throw(Error);
 expect(handler).to.throw("You left ouf the direction ! I need that for math!");
+```
+<a name="game-instance-functions"></a>
+# GAME INSTANCE FUNCTIONS
+<a name="game-instance-functions-checkgamestatus"></a>
+## checkGameStatus
+should tell me when the game is over.
+
+```js
+let players = [
+    {
+        ships: [
+            {
+                locations: [[0,0]],
+                damage: [[0,0]]
+            }
+        ]
+    }
+];
+let actual = checkGameStatus(players);
+expect(actual).to.be.false;
 ```
 
 <a name="checkforship"></a>
