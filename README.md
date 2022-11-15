@@ -1,6 +1,6 @@
 ## About
 
-This is a simple battleship game, written in Javascript using BDD (**B**ehaviour **D**riven **D**evelopment).
+This is a simple battleship game engine, written in Javascript using BDD (**B**ehaviour **D**riven **D**evelopment).
 It is part of a course on Unit Testing and BDD. [LINK](https://www.youtube.com/watch?v=u5cLK1UrFyQ)
 
 ### Prerequisites
