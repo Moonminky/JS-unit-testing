@@ -1,15 +1,15 @@
-const fire = require('./ship_methods').fire;
+const fire = require("./ship_methods").fire;
 
 function checkGameStatus(players) {
-    return false;
+  return false;
 }
 
 function takeTurn(opposingPlayer, createCoordinates) {
-    let coordinates = createCoordinates();
-    fire(opposingPlayer, coordinates);
-    let gameOver = checkGameStatus();
-    
-    return gameOver;
+  let coordinates = createCoordinates();
+  fire(opposingPlayer, coordinates);
+  let gameOver = checkGameStatus();
+
+  return gameOver;
 }
 
 module.exports.checkGameStatus = checkGameStatus;

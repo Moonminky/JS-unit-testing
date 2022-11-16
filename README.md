@@ -29,6 +29,7 @@ This project uses Mocha and Chai for unit testing.
 - [GAME INSTANCE FUNCTIONS](#game-instance-functions)
   - [checkGameStatus](#game-instance-functions-checkgamestatus)
   - [takeTurn](#game-instance-functions-taketurn)
+  - [saveGame](#game-instance-functions-savegame)
 - [SHIP METHODS](#ship-methods)
      - [checkForShip](#ship-methods-checkforship)
      - [damageShip](#ship-methods-damageship)
@@ -167,6 +168,19 @@ should return false if the game ends.
 ```js
 let actual = takeTurn(player, guess);
 expect(actual).to.be.false;
+```
+
+<a name="game-instance-functions-savegame"></a>
+## saveGame
+should update save status.
+
+```js
+let status = "game not saved...";
+saveGame(function() {
+  status = "game saved!";
+  expect(status).to.equal("game saved!");
+  done();
+});
 ```
 
 <a name="ship-methods"></a>
