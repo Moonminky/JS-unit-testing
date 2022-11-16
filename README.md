@@ -28,6 +28,7 @@ This project uses Mocha and Chai for unit testing.
   - [placeShip](#player-methods-placeship)
 - [GAME INSTANCE FUNCTIONS](#game-instance-functions)
   - [checkGameStatus](#game-instance-functions-checkgamestatus)
+  - [takeTurn](#game-instance-functions-taketurn)
 - [SHIP METHODS](#ship-methods)
      - [checkForShip](#ship-methods-checkforship)
      - [damageShip](#ship-methods-damageship)
@@ -157,6 +158,14 @@ let players = [
     }
 ];
 let actual = checkGameStatus(players);
+expect(actual).to.be.false;
+```
+<a name="game-instance-functions-taketurn"></a>
+## takeTurn
+should return false if the game ends.
+
+```js
+let actual = takeTurn(player, guess);
 expect(actual).to.be.false;
 ```
 
